@@ -7,7 +7,7 @@ import { Observable, forkJoin } from 'rxjs';
 })
 export class ApiService {
   constructor(private http: HttpClient) {}
-  private apiUrl = 'http://localhost:3001';
+  private apiUrl = 'http://localhost:3000';
 
   addApplication(data: FormData) {
     return this.http.post<any>(`${this.apiUrl}/job/application`, data);
