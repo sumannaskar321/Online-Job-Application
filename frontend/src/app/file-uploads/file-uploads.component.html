@@ -1,0 +1,30 @@
+<div>
+  <button class="upload-btn m-1 position-relative" type="button">
+    <fa-icon [icon]="faFileArrowUp"></fa-icon> {{ btnName }}
+    <input
+      class="file-upload-field w-100 float-left"
+      name="file-upload"
+      type="file"
+      multiple
+      [formControl]="uploadControl"
+      (change)="onSelectFile($event)"
+    />
+  </button>
+
+  <div *ngIf="files.length > 0">
+    <h5 class="h6">Uploaded {{ btnName }}</h5>
+    <div
+      class="d-flex mb-2 w-75 justify-content-center card"
+      *ngFor="let f of files; let i = index"
+    >
+      <div class="d-flex mb-2 w-80 justify-content-center p-4">
+        <p class="w-100 m-0">{{ f?.name }}</p>
+        <fa-icon
+          class="float-left"
+          [icon]="faTrash"
+          (click)="removeFile(i)"
+        ></fa-icon>
+      </div>
+    </div>
+  </div>
+</div>
