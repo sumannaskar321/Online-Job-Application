@@ -22,6 +22,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 dist/
+public/
 
 # Visual Studo 2015 cache/options directory
 .vs/
@@ -206,7 +207,6 @@ FakesAssemblies/
 /bazel-out
 
 # Node
-node_modules/
 npm-debug.log
 yarn-error.log
 
@@ -228,7 +228,7 @@ yarn-error.log
 .history/*
 
 # Miscellaneous
-/.angular/cache
+*/.angular
 .sass-cache/
 /connect.lock
 /coverage
@@ -239,3 +239,4 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
